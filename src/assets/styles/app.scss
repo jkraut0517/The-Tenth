@@ -1,0 +1,69 @@
+@import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+$standardPadding: 1rem;
+
+$smallLayoutMin: 30rem;
+$mediumLayoutMin: 48rem;
+$largeLayoutMin: 76rem;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+nav, main, footer {
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  .menu-button {
+    position: relative;
+    z-index: 3;
+  }
+  ul {
+    background: rgba(0, 0, 0, 1);
+    height: 100vh;
+    left: -400px;
+    margin: 0;
+    padding: 3rem 0 0;
+    position: absolute;
+    transition: left .3s;
+    z-index: 2;
+    &.visible {
+      left: -$standardPadding;
+      top: -$standardPadding;
+    }
+  }
+  li {
+    list-style-type: none;
+    a {
+      display: inline-block;
+      padding: $standardPadding ($standardPadding*3) $standardPadding ($standardPadding/2);
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  max-width: 960px;
+}
+
+main {
+  position: relative;
+  section {
+    display: grid;
+  }
+}
