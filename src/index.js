@@ -1,20 +1,31 @@
 import styles from '../src/assets/styles/app.scss';
+import headshotSrc from '../src/assets/images/gigi-headshot-cropped.jpg';
 
-document.addEventListener('DOMContentLoaded', function(event) {
+const headshot = document.getElementById('gigi-headshot');
+console.log(headshotSrc);
+headshot.src = headshotSrc;
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
   const menu = document.getElementsByClassName('menu-nav-list')[0];
-  const menuBtn = document.getElementsByClassName('menu-button')[0];
+  const menuBtns = document.querySelectorAll('.menu-button');
+  const menuLinks = document.querySelectorAll('nav li a');
+  const main = document.getElementsByTagName('main')[0];
 
   const toggleMenu = () => {
     if (menu.classList.contains('visible')) {
       menu.classList.remove('visible');
-      menuBtn.classList.remove('is-active');
+      main.classList.remove('nav-open');
     } else {
       menu.classList.add('visible');
-      menuBtn.classList.add('is-active');
+      main.classList.add('nav-open');
     } 
   };
 
-  const setUpMenuToggle = () => menuBtn.addEventListener('click', toggleMenu);
+const setUpMenuToggle = () => [].forEach.call(menuBtns, btn => btn.addEventListener('click', toggleMenu));
+const setUpNavLinks = () => [].forEach.call(menuLinks, link => link.addEventListener('click', toggleMenu));
 
-  setUpMenuToggle();
+
+setUpMenuToggle();
+setUpNavLinks();
 });

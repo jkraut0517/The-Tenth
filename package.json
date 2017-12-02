@@ -28,7 +28,6 @@
     "production": "NODE_ENV=production webpack"
   },
   "dependencies": {
-    "autoprefixer-loader": "^3.2.0",
-    "hamburgers": "^0.9.1"
+    "autoprefixer-loader": "^3.2.0"
   }
 }
