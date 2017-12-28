@@ -1,24 +1,4 @@
-$baseUnit: 1rem;
-
-$softGold: #F2D9A7;
-$sandy: #FFF5E2;
-$mellowOrange: #FFB480;
-$aqua: #C0FFF2;
-$wornGreen: #78CCA3;
-
-$standardPadding: $baseUnit;
-$standardMargin: $baseUnit;
-$standardFontSize: $baseUnit;
-
-$smallLayoutMin: 30rem;
-$mediumLayoutMin: 48rem;
-$contentWidth: 60rem;
-$largeLayoutMin: 76rem;
-
-
-$navBgColor: $softGold;
-$bodyBgColor: lighten($sandy, 3%);
-$slideshowBgColor: $wornGreen;
+@import 'variables';
 
 body {
   background-color: $bodyBgColor;
@@ -30,38 +10,89 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+p {
+  line-height: 1.35rem;
+  margin-bottom: 0;
+  + h2 {
+    margin-top: 1em;
+  }
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+small {
+  display: block;
+  margin: 1rem 0;
+}
+
 nav {
-  background: $navBgColor;
+  background: lighten($navBgColor, 12%);
   box-shadow: 1px 1px 6px #ccc;
   display: flex;
   left: 0;
-  padding: $standardPadding;
+  padding: $standardPadding/2 $standardPadding;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
   .menu-button {
+    @include block-cta;
+    background: darken($aqua, 60%);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    padding: .5rem;
     position: relative;
+    &:hover {
+      background: darken($aqua, 55%);
+    }
+    @media (min-width: $mediumLayoutMin) {
+      display: none;
+    }
   }
   h1 {
     font-size: $standardFontSize;
     margin: ($standardPadding/3) 0;
   }
-  ul {
-    $listWidth: 18.75rem;
+  .menu-nav-list {
+    $navListWidth: 12.75rem;
     background: white;
     height: 100vh;
-    left: -$listWidth;
+    left: -$navListWidth;
     top: -$standardPadding;
     margin: 0;
     padding-left: 0;
     padding-top: 2rem;
     position: fixed;
     transition: left .2s;
-    width: $listWidth;
+    width: $navListWidth;
     z-index: 2;
     &.visible {
       left: 0;
+    }
+    @media (min-width: $mediumLayoutMin) {
+      background: none;
+      display: flex;
+      padding: 0;
+      position: relative;
+      left: 0;
+      height: auto;
+      top: 0;
+      width: auto;
+      .close-menu {
+        display: none;
+      }
+    }
+  }
+  .header-contact-link {
+    @include standardTextShadow;
+    margin: 0 2.25rem 0 auto;
+    padding: .5rem;
+    @media (min-width: $mediumLayoutMin) {
+      height: fit-content;
     }
   }
   li {
@@ -69,6 +100,9 @@ nav {
     padding-left: $standardPadding;
     &:not(.close-menu):hover {
       background: $bodyBgColor;
+      @media (min-width: $mediumLayoutMin) {
+        background: none;
+      }
     };
     a {
       display: block;
@@ -77,9 +111,15 @@ nav {
       &:hover {
         text-decoration: underline;
       };
+      @media (min-width: $mediumLayoutMin) {
+        padding-bottom: $standardPadding/2;
+        padding-top: $standardPadding/2;
+      }
     }
   }
 }
+
+
 
 h1 {
   font-size: 1.6667rem;
@@ -97,42 +137,127 @@ h2 {
 }
 
 .grid {
+  display: grid;
+}
+
+.grid, .centered-content {
   max-width: $contentWidth;
   width: 100%;
 }
 
 main {
-  padding-top: 3.65rem;
   position: relative;
+  padding-top: 3rem;
   &.nav-open {
     opacity: 0.3;
+    @media (min-width: $mediumLayoutMin) {
+      opacity: 1;
+    }
+  }
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+  }
+  li {
+    margin: .5rem 0;
   }
   > section {
     display: flex;
     justify-content: center;
     padding: ($standardPadding*2) $standardPadding;
     &:nth-of-type(odd) {
-      background: $mellowOrange;
+      background: lighten($mellowOrange, 22%);
     }
     &.slideshow {
-      background: $slideshowBgColor;
+      @include responsive-background-img('../images/massage-happening-here.jpg');
+      @media (min-width: $mediumLayoutMin) {
+        background-attachment: fixed;
+        height: 40vh;
+      }
+      h1 {
+        @media (min-width: $mediumLayoutMin) {
+          font-size: 3rem;
+        }
+      }
     }
   }
 }
 
+#services-title {
+  @include responsive-background-img('../images/candles.jpg');
+}
+
+#contact-title {
+  @include responsive-background-img('../images/geranium-water-rings.jpg');
+}
+
+#about-title {
+  @include responsive-background-img('../images/towels.jpg');
+}
+
+#services-title, #contact-title, #about-title {
+  @include sectionTitle;
+  @media (min-width: $mediumLayoutMin) {
+    background-attachment: fixed;
+    height: 30vh;
+  }
+}
+
+#services {
+  padding-top: 1.5rem;
+}
+
+
 #gigi-headshot {
   border-radius: 100%;
   float: left;
-  margin: ($standardMargin*2) ($standardMargin*2) ($standardMargin*2) 0;
+  margin: ($standardMargin*2) ($standardMargin*2) ($standardMargin*2.5) 0;
   max-width: 15rem;
   overflow: hidden;
   shape-outside: circle(42%);
   width: 45%;
 }
 
+
+.services-and-rates {
+  > li + li {
+    margin-top: 1rem;
+  }
+}
+
+.block-cta {
+  @include block-cta;
+}
+
 .slideshow {
+  @include standardTextShadow;
   color: white;
-  min-height: 10rem;
+  min-height: 8rem;
   overflow: hidden;
-  text-shadow: 1px 1px 2px black;
+  h1 + h2 {
+    margin: 0 0 1rem 0
+  }
+  .block-cta {
+    margin: auto 0 1rem 0;
+    &:last-of-type {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+  @media (min-width: $mediumLayoutMin) {
+    min-height: 14rem;
+  }
+  @media (min-width: $largeLayoutMin) {
+    min-height: 20rem;
+  }
+  .slide {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $smallLayoutMin) {
+      display: block;
+      .block-cta {
+        margin-right: 1rem;
+      }
+    }
+  }
 }

@@ -14,11 +14,15 @@ module.exports = {
       {
         test: /\.(jpg|png|svg)$/,
         use: [
+          {
+            loader: 'responsive-loader',
+          },
           { loader: "url-loader",
             options: {
               limit: 25000,
+              name: 'images/[hash]-[name].[ext]'
             },
-          }
+          },
         ]
       },
       {
@@ -32,7 +36,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           { loader: 'style-loader', options: {
-              sourceMap: true,
+              sourceMap: false,
             },
           },
           { loader: 'css-loader' },
