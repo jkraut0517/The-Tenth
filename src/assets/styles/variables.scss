@@ -1,5 +1,6 @@
 $baseUnit: 1rem;
 
+$darkBrown: #541900;
 $softGold: #F2D9A7;
 $sandy: #FFF5E2;
 $mellowOrange: #FFB480;
@@ -16,6 +17,7 @@ $contentWidth: 60rem;
 $largeLayoutMin: 76rem;
 
 $navBgColor: $softGold;
+$bodyTextColor: $darkBrown;
 $bodyBgColor: lighten($sandy, 3%);
 $slideshowBgColor: $wornGreen;
 
@@ -25,6 +27,7 @@ $slideshowBgColor: $wornGreen;
 
 @mixin block-cta {
   background: lighten($wornGreen, 5%);
+  border-radius: .5em;
   box-shadow: 1px 1px 3px #333;
   color: white;
   display: inline-block;

@@ -2,6 +2,9 @@ const webpack = require('webpack');
 const path = require('path');
 const UglifyJS = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin"); 
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -23,6 +26,7 @@ module.exports = {
               name: 'images/[hash]-[name].[ext]'
             },
           },
+          {  loader: 'image-webpack-loader' },
         ]
       },
       {
@@ -46,7 +50,18 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    new GoogleFontsPlugin({
+      fonts: [
+        { family: 'Catamaran' },
+        { family: 'Philosopher' },
+      ],
+      local: false,
+    })
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, './public'),
     historyApiFallback: true,
@@ -57,7 +72,22 @@ module.exports = {
 };
 
 if (process.env.NODE_ENV === 'production') {
+  const paths = [{
+    loc: '/',
+    priority: '1.0',
+    lastmod: '2018-01-03',
+    changeFreq: 'weekly'
+  }];
+
+  module.exports.module.rules[2] = {
+    test: /\.scss$/,
+    use: ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      use: ['css-loader', 'autoprefixer-loader', 'sass-loader']
+    })
+  };
   module.exports.plugins.push(
+    new ExtractTextPlugin('style.css'),
     new UglifyJS(),
     new OptimizeCSSAssets()
   );

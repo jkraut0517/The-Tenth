@@ -213,7 +213,7 @@ async@^1.5.2:
   version "1.5.2"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
-async@^2.1.2, async@^2.1.5:
+async@^2.1.2, async@^2.1.5, async@^2.4.1:
   version "2.6.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
   dependencies:
@@ -755,7 +755,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.5.0:
+bluebird@^3.4.7, bluebird@^3.5.0:
   version "3.5.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
@@ -792,6 +792,10 @@ bonjour@^3.5.0:
     dns-txt "^2.0.2"
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
+
+boolbase@~1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
 
 boom@2.x.x:
   version "2.10.1"
@@ -952,6 +956,13 @@ cacache@^10.0.0:
     unique-filename "^1.1.0"
     y18n "^3.2.1"
 
+camel-case@3.0.x:
+  version "3.0.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/camel-case/-/camel-case-3.0.0.tgz#ca3c3688a4e9cf3a4cda777dc4dcbc713249cf73"
+  dependencies:
+    no-case "^2.2.0"
+    upper-case "^1.1.1"
+
 camelcase-keys@^2.0.0:
   version "2.1.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/camelcase-keys/-/camelcase-keys-2.1.0.tgz#308beeaffdf28119051efa1d932213c91b8f92e7"
@@ -1066,6 +1077,12 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
+clean-css@4.1.x:
+  version "4.1.9"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/clean-css/-/clean-css-4.1.9.tgz#35cee8ae7687a49b98034f70de00c4edd3826301"
+  dependencies:
+    source-map "0.5.x"
+
 cliui@^2.1.0:
   version "2.1.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/cliui/-/cliui-2.1.0.tgz#4b475760ff80264c762c3a1719032e91c7fea0d1"
@@ -1163,7 +1180,7 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.9.0, commander@~2.12.1:
+commander@2.12.x, commander@^2.9.0, commander@~2.12.1:
   version "2.12.2"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
 
@@ -1367,6 +1384,15 @@ css-loader@^0.28.7:
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
 
+css-select@^1.1.0:
+  version "1.2.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/css-select/-/css-select-1.2.0.tgz#2b3a110539c5355f1cd8d314623e870b121ec858"
+  dependencies:
+    boolbase "~1.0.0"
+    css-what "2.1"
+    domutils "1.5.1"
+    nth-check "~1.0.1"
+
 css-selector-tokenizer@^0.7.0:
   version "0.7.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/css-selector-tokenizer/-/css-selector-tokenizer-0.7.0.tgz#e6988474ae8c953477bf5e7efecfceccd9cf4c86"
@@ -1374,6 +1400,10 @@ css-selector-tokenizer@^0.7.0:
     cssesc "^0.1.0"
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
+
+css-what@2.1:
+  version "2.1.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
 
 cssesc@^0.1.0:
   version "0.1.0"
@@ -1629,6 +1659,19 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
+dom-converter@~0.1:
+  version "0.1.4"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/dom-converter/-/dom-converter-0.1.4.tgz#a45ef5727b890c9bffe6d7c876e7b19cb0e17f3b"
+  dependencies:
+    utila "~0.3"
+
+dom-serializer@0:
+  version "0.1.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/dom-serializer/-/dom-serializer-0.1.0.tgz#073c697546ce0780ce23be4a28e293e40bc30c82"
+  dependencies:
+    domelementtype "~1.1.1"
+    entities "~1.1.1"
+
 dom-walk@^0.1.0:
   version "0.1.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
@@ -1636,6 +1679,33 @@ dom-walk@^0.1.0:
 domain-browser@^1.1.1:
   version "1.1.7"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
+
+domelementtype@1:
+  version "1.3.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/domelementtype/-/domelementtype-1.3.0.tgz#b17aed82e8ab59e52dd9c19b1756e0fc187204c2"
+
+domelementtype@~1.1.1:
+  version "1.1.3"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/domelementtype/-/domelementtype-1.1.3.tgz#bd28773e2642881aec51544924299c5cd822185b"
+
+domhandler@2.1:
+  version "2.1.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/domhandler/-/domhandler-2.1.0.tgz#d2646f5e57f6c3bab11cf6cb05d3c0acf7412594"
+  dependencies:
+    domelementtype "1"
+
+domutils@1.1:
+  version "1.1.6"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/domutils/-/domutils-1.1.6.tgz#bddc3de099b9a2efacc51c623f28f416ecc57485"
+  dependencies:
+    domelementtype "1"
+
+domutils@1.5.1:
+  version "1.5.1"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/domutils/-/domutils-1.5.1.tgz#dcd8488a26f563d61079e48c9f7b7e32373682cf"
+  dependencies:
+    dom-serializer "0"
+    domelementtype "1"
 
 download@^4.0.0, download@^4.1.2:
   version "4.4.3"
@@ -1719,6 +1789,12 @@ encodeurl@~1.0.1:
   version "1.0.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/encodeurl/-/encodeurl-1.0.1.tgz#79e3d58655346909fe6f0f45a5de68103b294d20"
 
+encoding@^0.1.11:
+  version "0.1.12"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
+  dependencies:
+    iconv-lite "~0.4.13"
+
 end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   version "1.4.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/end-of-stream/-/end-of-stream-1.4.0.tgz#7a90d833efda6cfa6eac0f4949dbb0fad3a63206"
@@ -1733,6 +1809,10 @@ enhanced-resolve@^3.4.0:
     memory-fs "^0.4.0"
     object-assign "^4.0.1"
     tapable "^0.2.7"
+
+entities@~1.1.1:
+  version "1.1.1"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
 errno@^0.1.3:
   version "0.1.6"
@@ -1995,6 +2075,15 @@ extglob@^0.3.1:
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/extglob/-/extglob-0.3.2.tgz#2e18ff3d2f49ab2765cec9023f011daa8d8349a1"
   dependencies:
     is-extglob "^1.0.0"
+
+extract-text-webpack-plugin@^3.0.2:
+  version "3.0.2"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.2.tgz#5f043eaa02f9750a9258b78c0a6e0dc1408fb2f7"
+  dependencies:
+    async "^2.4.1"
+    loader-utils "^1.1.0"
+    schema-utils "^0.3.0"
+    webpack-sources "^1.0.1"
 
 extsprintf@1.3.0:
   version "1.3.0"
@@ -2412,6 +2501,15 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
+google-fonts-webpack-plugin@^0.4.4:
+  version "0.4.4"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/google-fonts-webpack-plugin/-/google-fonts-webpack-plugin-0.4.4.tgz#deb897a8ba9097aa7ac78e31c532e266b3b701f9"
+  dependencies:
+    lodash "^4.17.4"
+    node-fetch "^1.6.3"
+    webpack-sources "^0.2.0"
+    yauzl "^2.8.0"
+
 got@^5.0.0:
   version "5.7.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"
@@ -2595,6 +2693,10 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
+he@1.1.x:
+  version "1.1.1"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -2638,6 +2740,39 @@ html-comment-regex@^1.1.0:
 html-entities@^1.2.0:
   version "1.2.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
+
+html-minifier@^3.2.3:
+  version "3.5.8"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/html-minifier/-/html-minifier-3.5.8.tgz#5ccdb1f73a0d654e6090147511f6e6b2ee312700"
+  dependencies:
+    camel-case "3.0.x"
+    clean-css "4.1.x"
+    commander "2.12.x"
+    he "1.1.x"
+    ncname "1.0.x"
+    param-case "2.1.x"
+    relateurl "0.2.x"
+    uglify-js "3.3.x"
+
+html-webpack-plugin@^2.30.1:
+  version "2.30.1"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/html-webpack-plugin/-/html-webpack-plugin-2.30.1.tgz#7f9c421b7ea91ec460f56527d78df484ee7537d5"
+  dependencies:
+    bluebird "^3.4.7"
+    html-minifier "^3.2.3"
+    loader-utils "^0.2.16"
+    lodash "^4.17.3"
+    pretty-error "^2.0.2"
+    toposort "^1.0.0"
+
+htmlparser2@~3.3.0:
+  version "3.3.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/htmlparser2/-/htmlparser2-3.3.0.tgz#cc70d05a59f6542e43f0e685c982e14c924a9efe"
+  dependencies:
+    domelementtype "1"
+    domhandler "2.1"
+    domutils "1.1"
+    readable-stream "1.0"
 
 http-deceiver@^1.2.7:
   version "1.2.7"
@@ -2692,7 +2827,7 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-iconv-lite@0.4.19:
+iconv-lite@0.4.19, iconv-lite@~0.4.13:
   version "0.4.19"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
@@ -3324,7 +3459,7 @@ loader-runner@^2.3.0:
   version "2.3.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
 
-loader-utils@^0.2.11:
+loader-utils@^0.2.11, loader-utils@^0.2.16:
   version "0.2.17"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
   dependencies:
@@ -3463,7 +3598,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.4, lodash@~4.17.4:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3494,6 +3629,10 @@ loud-rejection@^1.0.0:
   dependencies:
     currently-unhandled "^0.4.1"
     signal-exit "^3.0.0"
+
+lower-case@^1.1.1:
+  version "1.1.4"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
 
 lowercase-keys@^1.0.0:
   version "1.0.0"
@@ -3737,9 +3876,28 @@ nan@^2.3.0, nan@^2.3.2:
   version "2.8.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/nan/-/nan-2.8.0.tgz#ed715f3fe9de02b57a5e6252d90a96675e1f085a"
 
+ncname@1.0.x:
+  version "1.0.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/ncname/-/ncname-1.0.0.tgz#5b57ad18b1ca092864ef62b0b1ed8194f383b71c"
+  dependencies:
+    xml-char-classes "^1.0.0"
+
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+no-case@^2.2.0:
+  version "2.3.2"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
+  dependencies:
+    lower-case "^1.1.1"
+
+node-fetch@^1.6.3:
+  version "1.7.3"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
+  dependencies:
+    encoding "^0.1.11"
+    is-stream "^1.0.1"
 
 node-forge@0.6.33:
   version "0.6.33"
@@ -3890,6 +4048,12 @@ npm-run-path@^2.0.0:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
+
+nth-check@~1.0.1:
+  version "1.0.1"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/nth-check/-/nth-check-1.0.1.tgz#9929acdf628fc2c41098deab82ac580cf149aae4"
+  dependencies:
+    boolbase "~1.0.0"
 
 num2fraction@^1.2.2:
   version "1.2.2"
@@ -4054,6 +4218,12 @@ parallel-transform@^1.1.0:
     cyclist "~0.2.2"
     inherits "^2.0.3"
     readable-stream "^2.1.5"
+
+param-case@2.1.x:
+  version "2.1.1"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/param-case/-/param-case-2.1.1.tgz#df94fd8cf6531ecf75e6bef9a0858fbc72be2247"
+  dependencies:
+    no-case "^2.2.0"
 
 parse-asn1@^5.0.0:
   version "5.1.0"
@@ -4486,6 +4656,13 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
+pretty-error@^2.0.2:
+  version "2.1.1"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/pretty-error/-/pretty-error-2.1.1.tgz#5f4f87c8f91e5ae3f3ba87ab4cf5e03b1a17f1a3"
+  dependencies:
+    renderkid "^2.0.1"
+    utila "~0.4"
+
 private@^0.1.6, private@^0.1.7:
   version "0.1.8"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -4692,7 +4869,7 @@ read-pkg@^2.0.0:
     string_decoder "~1.0.3"
     util-deprecate "~1.0.1"
 
-"readable-stream@>=1.0.33-1 <1.1.0-0":
+readable-stream@1.0, "readable-stream@>=1.0.33-1 <1.1.0-0":
   version "1.0.34"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
   dependencies:
@@ -4788,9 +4965,23 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
+relateurl@0.2.x:
+  version "0.2.7"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
+
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
+
+renderkid@^2.0.1:
+  version "2.0.1"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/renderkid/-/renderkid-2.0.1.tgz#898cabfc8bede4b7b91135a3ffd323e58c0db319"
+  dependencies:
+    css-select "^1.1.0"
+    dom-converter "~0.1"
+    htmlparser2 "~3.3.0"
+    strip-ansi "^3.0.0"
+    utila "~0.3"
 
 repeat-element@^1.1.2:
   version "1.1.2"
@@ -5153,6 +5344,10 @@ sort-keys@^1.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
+source-list-map@^1.1.1:
+  version "1.1.2"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/source-list-map/-/source-list-map-1.1.2.tgz#9889019d1024cce55cdc069498337ef6186a11a1"
+
 source-list-map@^2.0.0:
   version "2.0.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/source-list-map/-/source-list-map-2.0.0.tgz#aaa47403f7b245a92fbc97ea08f250d6087ed085"
@@ -5163,15 +5358,15 @@ source-map-support@^0.4.15:
   dependencies:
     source-map "^0.5.6"
 
+source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1, source-map@~0.5.3:
+  version "0.5.7"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
+
 source-map@^0.4.2:
   version "0.4.4"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
   dependencies:
     amdefine ">=0.0.4"
-
-source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1:
-  version "0.5.7"
-  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
 source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
@@ -5560,6 +5755,10 @@ to-fast-properties@^1.0.3:
   version "1.0.3"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"
 
+toposort@^1.0.0:
+  version "1.0.6"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/toposort/-/toposort-1.0.6.tgz#c31748e55d210effc00fdcdc7d6e68d7d7bb9cec"
+
 tough-cookie@~2.3.0, tough-cookie@~2.3.3:
   version "2.3.3"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/tough-cookie/-/tough-cookie-2.3.3.tgz#0b618a5565b6dea90bf3425d04d55edc475a7561"
@@ -5622,6 +5821,13 @@ typedarray@^0.0.6:
 uglify-es@^3.1.3:
   version "3.2.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/uglify-es/-/uglify-es-3.2.0.tgz#fbbfb9dc465ec7e5065701b9720d0de977d0bc24"
+  dependencies:
+    commander "~2.12.1"
+    source-map "~0.6.1"
+
+uglify-js@3.3.x:
+  version "3.3.3"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/uglify-js/-/uglify-js-3.3.3.tgz#66f9b57f7dda913ad9f48a21b12e4e7377fdaf40"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
@@ -5704,6 +5910,10 @@ unzip-response@^1.0.2:
   version "1.0.2"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/unzip-response/-/unzip-response-1.0.2.tgz#b984f0877fc0a89c2c773cc1ef7b5b232b5b06fe"
 
+upper-case@^1.1.1:
+  version "1.1.3"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
+
 url-loader@^0.6.2:
   version "0.6.2"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/url-loader/-/url-loader-0.6.2.tgz#a007a7109620e9d988d14bce677a1decb9a993f7"
@@ -5754,6 +5964,14 @@ util@0.10.3, util@^0.10.3:
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/util/-/util-0.10.3.tgz#7afb1afe50805246489e3db7fe0ed379336ac0f9"
   dependencies:
     inherits "2.0.1"
+
+utila@~0.3:
+  version "0.3.3"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/utila/-/utila-0.3.3.tgz#d7e8e7d7e309107092b05f8d9688824d633a4226"
+
+utila@~0.4:
+  version "0.4.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/utila/-/utila-0.4.0.tgz#8a16a05d445657a3aea5eecc5b12a4fa5379772c"
 
 utils-merge@1.0.1:
   version "1.0.1"
@@ -5914,6 +6132,13 @@ webpack-dev-server@^2.9.5:
     webpack-dev-middleware "^1.11.0"
     yargs "^6.6.0"
 
+webpack-sources@^0.2.0:
+  version "0.2.3"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/webpack-sources/-/webpack-sources-0.2.3.tgz#17c62bfaf13c707f9d02c479e0dcdde8380697fb"
+  dependencies:
+    source-list-map "^1.1.1"
+    source-map "~0.5.3"
+
 webpack-sources@^1.0.1:
   version "1.1.0"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/webpack-sources/-/webpack-sources-1.1.0.tgz#a101ebae59d6507354d71d8013950a3a8b7a5a54"
@@ -6024,6 +6249,10 @@ xhr@^2.0.1:
     parse-headers "^2.0.0"
     xtend "^4.0.0"
 
+xml-char-classes@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/xml-char-classes/-/xml-char-classes-1.0.0.tgz#64657848a20ffc5df583a42ad8a277b4512bbc4d"
+
 xml-parse-from-string@^1.0.0:
   version "1.0.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/xml-parse-from-string/-/xml-parse-from-string-1.0.1.tgz#a9029e929d3dbcded169f3c6e28238d95a5d5a28"
@@ -6132,7 +6361,7 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-yauzl@^2.2.1:
+yauzl@^2.2.1, yauzl@^2.8.0:
   version "2.9.1"
   resolved "https://artifactory.impinj.com:443/artifactory/api/npm/npm-virtual/yauzl/-/yauzl-2.9.1.tgz#a81981ea70a57946133883f029c5821a89359a7f"
   dependencies:

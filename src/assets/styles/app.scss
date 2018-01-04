@@ -1,12 +1,21 @@
 @import 'variables';
 
 body {
-  background-color: $bodyBgColor;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: $bodyBgColor;  
+  // font-family: 'Berkshire Swash', cursive;
+  // font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+  // font-family: 'Alfa Slab One', Arial, Helvetica, sans-serif;
+  font-family: 'Catamaran', Arial, Helvetica, sans-serif;
+  // font-family: 'Acme', Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
+body, a {
+  color: $bodyTextColor;
+}
+
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Philosopher', Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -29,10 +38,10 @@ small {
 
 nav {
   background: lighten($navBgColor, 12%);
-  box-shadow: 1px 1px 6px #ccc;
+  border-bottom: 1px solid $darkBrown;
   display: flex;
   left: 0;
-  padding: $standardPadding/2 $standardPadding;
+  padding: 0 $standardPadding;
   position: fixed;
   top: 0;
   width: 100%;
@@ -43,6 +52,7 @@ nav {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    margin: .5rem 0;
     outline: none;
     padding: .5rem;
     position: relative;
@@ -60,13 +70,14 @@ nav {
   .menu-nav-list {
     $navListWidth: 12.75rem;
     background: white;
+    font-family: 'Philosopher', Arial, Helvetica, sans-serif;
     height: 100vh;
     left: -$navListWidth;
-    top: -$standardPadding;
     margin: 0;
     padding-left: 0;
     padding-top: 2rem;
     position: fixed;
+    top: -$standardPadding;
     transition: left .2s;
     width: $navListWidth;
     z-index: 2;
@@ -76,12 +87,15 @@ nav {
     @media (min-width: $mediumLayoutMin) {
       background: none;
       display: flex;
-      padding: 0;
+      padding: 0 1rem;
       position: relative;
       left: 0;
       height: auto;
       top: 0;
       width: auto;
+      li {
+        padding: .5rem;
+      }
       .close-menu {
         display: none;
       }
@@ -89,7 +103,8 @@ nav {
   }
   .header-contact-link {
     @include standardTextShadow;
-    margin: 0 2.25rem 0 auto;
+    font-size: .8rem;
+    margin: .5rem 2.25rem .5rem auto;
     padding: .5rem;
     @media (min-width: $mediumLayoutMin) {
       height: fit-content;
@@ -170,8 +185,8 @@ main {
     }
     &.slideshow {
       @include responsive-background-img('../images/massage-happening-here.jpg');
+      background-attachment: fixed;
       @media (min-width: $mediumLayoutMin) {
-        background-attachment: fixed;
         height: 40vh;
       }
       h1 {
@@ -197,9 +212,10 @@ main {
 
 #services-title, #contact-title, #about-title {
   @include sectionTitle;
+  background-attachment: fixed;
   @media (min-width: $mediumLayoutMin) {
-    background-attachment: fixed;
     height: 30vh;
+    max-height: 16rem;
   }
 }
 
@@ -220,8 +236,25 @@ main {
 
 
 .services-and-rates {
-  > li + li {
-    margin-top: 1rem;
+  @media (min-width: $mediumLayoutMin) {
+    display: flex;
+  }
+  > li {
+    list-style-type: none;
+    @media (min-width: $mediumLayoutMin) {
+      flex: 1 1 0;
+      margin-top: 0;
+      padding-right: 2rem;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    + li {
+      margin-top: 1rem;
+      @media (min-width: $mediumLayoutMin) {
+        margin-top: 0;
+      }
+    }
   }
 }
 
