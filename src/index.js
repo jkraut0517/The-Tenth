@@ -1,5 +1,5 @@
 import styles from '../src/assets/styles/app.scss';
-import headshotSrc from '../src/assets/images/gigi-headshot-cropped.jpg';
+import headshotSrc from '../src/assets/images/gigi-headshot-new.jpg';
 
 const headshot = document.getElementById('gigi-headshot');
 headshot.src = headshotSrc;
